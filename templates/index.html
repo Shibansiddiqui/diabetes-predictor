@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class>
+    <div class="form-box">
+        <div class="header-text">
+            Diabetes Predictor
+        </div>
+        <form  method="post" action="{{ url_for('cal') }}">
+            <input placeholder="Number of pregnancies" type="text" name="a"> 
+            <input placeholder="Glucose" type="text" name="b"> 
+            <input placeholder="Blood Pressure" type="text" name="c"> 
+            <input placeholder="Skin Thickness" type="text" name="d"> 
+            <input placeholder="Insulin" type="text" name="e"> 
+            <input placeholder="BMI" type="text" name="f"> 
+			<input placeholder="Diabetes Pedigree Function" type="text" name="g"> 
+			<input placeholder="Age" type="text" name="h"> 
+            
+            <button class="btn" type="submit">Predict</button>
+        </form>
+        {% if prediction is defined %}
+        <h2>Diabetes Result:</h2>
+        <p>{{ prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
