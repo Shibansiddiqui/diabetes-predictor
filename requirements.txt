@@ -24,3 +24,4 @@ werkzeug
 wheel
 yarg
 joblib
+scikit-learn
