@@ -12,6 +12,7 @@ idna
 itsdangerous
 jinja2
 markupsafe
+numpy
 packaging
 pipreqs
 requests
